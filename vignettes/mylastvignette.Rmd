@@ -1,0 +1,25 @@
+---
+title: "mylastvignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mylastvignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(packagelab4)
+linreg_mod <- linreg$new(Petal.Length~Sepal.Width+Sepal.Length, data=iris)
+```
+
+```{r}
+linreg_mod$plot()
+```
+
